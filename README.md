@@ -9,14 +9,27 @@ To rock the interview to achieve what you deserve and to improve your concepts a
 21+ questions and answers (for intermediate)
 __________________
 1. What are the differences between ` null ` and ` undefined `?
+   null is the representation that there is no value. undefined means a variable has been declared but has not yet been assigned a value.
 2. What are the differences between `==` and `===`?
+    '==' will do type corecion to get values to match and '===' checks if the values and type match
 3. How would you compare two objects in JavaScript?
+    Object.is(value1, value2)? You create a function to match the property and value. 
 4. 11+ true false related questions that will trick you.
 5. As `[]` is true, `[] == true` should also be true. right?
+    That is equal to false. Because of type coercion an empty array is equal to false. But [] on its own is an object and objects are always true.
 6. How could you write a method on instance of a date which will give you next day?
+    ``` Date.prototype.tomorrow = function(){
+          var current = this.getDate()
+          return new Date(this.setDate(current+1))
+    } ```
 7. If you want to use an arbitrary object as value of this, how will you do that?
+   Call, apply, or bind! The advantage of bind is that the function is not immediately invoked
 8. Write a simple function to tell whether 2 is passed as parameter or not?
+
 9. How could you use Math.max to find the max value in an array?
+   ```function getMaxOfArray(numArray) {
+  return Math.max.apply(null, numArray);
+}```
 10. What the heck is this in JavaScript?
 11. 21 quick questions that will trick you.
 12. How could you set a prefix before everything you log? for example, if you log('my message') it will log: "(app) my message"
